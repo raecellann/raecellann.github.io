@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    background-color: #1E1E1E;
+    color: white;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden; 
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: 100%;
+    background-image: url(https://res.cloudinary.com/diws5bcu6/image/upload/v1724476446/Dawn_1_xw8ecc.png); 
+    color: white;
+}
+
+.navbar {
+    width: 95%;
+    background-color: rgba(255, 255, 255, 0.365);
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px; 
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    font-size: large;
+}
+
+.navbar ul li a:hover {
+    color: #000000;
+    background-color: #F1E8B8;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+    align-items: center; 
+    width: 100%;
+    max-width: 1200px;
+}
+
+.product_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    width: 100%;
+    text-align: center;
+}
+
+.product_title img {
+    width: 300px;
+    height: auto;
+}
+
+.products-section {
+    width: 100%;
+    text-align: center;
+}
+
+.products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    color: black;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.product-item img {
+    margin-top: 0%;
+    width: 310px;
+    height: 290px;
+    border-radius: 10px;
+}
+
+.product-item p {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.notice {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    position: relative;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notice p {
+    margin: 0;
+    flex: 1;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: red;
+}
