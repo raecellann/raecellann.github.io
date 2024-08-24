@@ -1,13 +1,13 @@
 body {
     margin: 0;
-    font-family: Outfit, sans-serif;
+    font-family: 'Monsterrat', sans-serif;
     background-color: #1E1E1E;
     color: white;
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
-    overflow: hidden; /* Disable scrolling */
+    overflow: hidden;
 }
 
 .container {
@@ -16,10 +16,10 @@ body {
     align-items: center;
     height: 100vh;
     padding: 20px;
-    background-image: url('Dawn\ \(1\).jpg'); /* Replace 'background.jpg' with your image filename */
-    background-size: cover; /* Makes sure the background covers the entire container */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-image: url(https://res.cloudinary.com/diws5bcu6/image/upload/v1724476446/Dawn_1_xw8ecc.png); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
     color: white;
 }
 
@@ -28,7 +28,7 @@ body {
     width: 95%;
     background-color: rgba(255, 255, 255, 0.365);
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 15px;
     display: flex;
     justify-content: flex-end;
 }
@@ -50,6 +50,7 @@ body {
     text-decoration: none;
     font-weight: bold;
     padding: 10px;
+    font-size: large;
 }
 
 .navbar ul li a:hover {
@@ -85,44 +86,29 @@ body {
 }
 
 .name img {
-    width: 450px; /* Adjust the width to fit your design */
-    height: auto; /* Keeps the aspect ratio of the SVG */
+    width: 450px; 
+    height: auto; 
     display: block; 
     margin-top: 10px;
     margin-left: 0px;
     margin-bottom: 0px;
 }
 
-.cta-button {
-    padding: 15px 25px;
-    font-size: 16px;
-    background-color: #FF7A18;
-    border: none;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 20px 0;
-    transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-    background-color: #AF002D;
-}
 
 .intro p {
-    color: #CCCCCC;
-    font-style: italic;
+    color: #ffffff;
+    font-style: bold;
 }
 
 .custom-button img {
-    width: 180px; /* Adjust the width to fit your design */
-    height: auto; /* Keeps the aspect ratio of the SVG */
-    display: block; /* Ensures the image is treated as a block element */
+    width: 180px; 
+    height: auto; 
+    display: block; 
 }
 
 .custom-button {
-    text-decoration: none; /* Removes underline from the link */
-    display: inline-block; /* Makes the link behave like a button */
-    margin-top: 0px; /* Adjust margin as needed */
-    /* Add any other styles you want for the button */
+    text-decoration: none; 
+    display: inline-block; 
+    margin-top: 0px;
 }
+
