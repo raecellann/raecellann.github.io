@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1E1E1E;
+    color: white;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    background-image: url(https://res.cloudinary.com/diws5bcu6/image/upload/v1724476446/Dawn_1_xw8ecc.png);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    background-repeat: no-repeat;
+    position: relative; 
+    z-index: 1;
+}
+
+.navbar {
+    width: 95%;
+    background-color: rgba(255, 255, 255, 0.365);
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 15px;
+    z-index: 2; 
+    position: relative;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.navbar ul li a:hover {
+    color: #1E1E1E;
+    background-color: #F1E8B8;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 50px;
+    width: 100%;
+    z-index: 3;
+}
+
+.main_title {
+    flex: 1;
+    max-width: 40%;
+}
+
+.main_title img {
+    width: 400px;
+    height: auto;
+}
+
+.main_picture {
+    position: absolute; 
+    top: 0px; 
+    right: 0;
+    z-index: 0; 
+    overflow: hidden;
+    bottom: 0px;
+
+}
+
+.main_picture img {
+    width: 380px;
+    height: 650px;
+    object-fit: cover;
+    border-radius: 0px;
+    overflow: hidden;
+    margin-right: 0px;
+}
+
+.gallery {
+    display: flex;
+    gap: 20px; 
+    margin-left: -400px; 
+}
+
+.gallery img {
+    width: 340px;
+    height: 200px;
+    border-radius: 25px;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+}
