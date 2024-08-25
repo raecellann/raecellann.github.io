@@ -11,7 +11,18 @@
 </head>
 <body>
     <div class="container">
-        <nav class="navbar">
+        <!-- Header Section for Home and Menu Buttons (Mobile Only) -->
+        <header class="header">
+            <a href="index.html" class="home-button">
+                <img src="Home.svg" alt="Home">
+            </a>
+            <a href="#" class="menu-button" id="menuButton">
+                <img src="menu.png" alt="Menu">
+            </a>
+        </header>
+
+        <!-- Navbar -->
+        <nav class="navbar" id="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
@@ -19,14 +30,16 @@
                 <li><a href="works.html">Works</a></li>
             </ul>
         </nav>
+
+        <!-- Main Content -->
         <div class="content">
             <div class="profile-picture">
-                <img src="https://res.cloudinary.com/diws5bcu6/image/upload/v1724476523/Group_15_tjdebt.svg" alt="Raecell Ann">
+                <img src="https://res.cloudinary.com/diws5bcu6/image/upload/v1724503309/Group_15_hfvdzc.png" alt="Raecell Ann">
             </div>
             <div class="intro">
-                    <div class="name">
-                        <img src="https://res.cloudinary.com/diws5bcu6/image/upload/v1724476439/NAME_ln0l0q.svg" alt="Raecell Ann">
-                    </div>
+                <div class="name">
+                    <img src="https://res.cloudinary.com/diws5bcu6/image/upload/v1724503622/NAME_br6oi5.png" alt="Raecell Ann">
+                </div>
                 <a href="about_me.html" class="custom-button">
                     <img src="https://res.cloudinary.com/diws5bcu6/image/upload/v1724476446/button_sssaa1.svg" alt="Get To Know Me">
                 </a>
@@ -34,5 +47,13 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.querySelector('.menu-button').addEventListener('click', function() {
+            document.querySelector('.navbar').classList.toggle('active');
+        });
+        </script>
+        
+        
 </body>
 </html>
