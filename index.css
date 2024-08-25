@@ -1,38 +1,55 @@
+/* Global Styles */
 body {
     margin: 0;
-    font-family: 'Monsterrat', sans-serif;
-    background-color: #1E1E1E;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1E1E1E; /* Matches the container background color */
     color: white;
-    margin: 0;
     padding: 0;
-    height: 100%;
+    height: 100vh; /* Ensure the body takes up the full viewport height */
     width: 100%;
-    overflow: hidden;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: auto; /* Allow vertical scrolling */
 }
 
+/* Box Sizing */
+* {
+    box-sizing: border-box;
+}
+
+/* Container Styling */
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* Minimum height set to full viewport */
     padding: 20px;
-    background-image: url(https://res.cloudinary.com/diws5bcu6/image/upload/v1724476446/Dawn_1_xw8ecc.png); 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
+    background: linear-gradient(124deg, rgba(242,143,79,1) 0%, rgba(90,80,108,1) 83%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: white;
 }
 
-
+/* Navbar Styling */
 .navbar {
     width: 95%;
     background-color: rgba(255, 255, 255, 0.365);
     padding: 20px;
-    border-radius: 15px;
-    display: flex;
+    display: flex; /* Visible by default on desktop */
     justify-content: flex-end;
+    border-radius: 15px;
+    flex-shrink: 0;
+    transition: all 0.3s ease-in-out; /* Smooth transition */
 }
 
+/* Hide Navbar on Mobile */
+@media (max-width: 1080px) {
+    .navbar {
+        display: none; /* Hide navbar on mobile */
+    }
+}
+
+/* Navigation List Styling */
 .navbar ul {
     list-style-type: none;
     margin: 0;
@@ -50,7 +67,7 @@ body {
     text-decoration: none;
     font-weight: bold;
     padding: 10px;
-    font-size: large;
+    font-size: 1rem; /* Use rem for consistent sizing */
 }
 
 .navbar ul li a:hover {
@@ -58,10 +75,9 @@ body {
     background-color: #F1E8B8;
     padding: 10px;
     border-radius: 10px;
-    box-shadow: black;
-
 }
 
+/* Content Styling */
 .content {
     display: flex;
     align-items: center;
@@ -70,6 +86,7 @@ body {
     gap: 50px;
 }
 
+/* Profile Picture Styling */
 .profile-picture {
     margin-right: 50px;
     border-radius: 0%;
@@ -81,34 +98,148 @@ body {
 
 .profile-picture img {
     width: 100%;
-    height: 100%;
+    height: auto; /* Maintain aspect ratio */
     object-fit: cover;
 }
 
+/* Additional Styling for Elements */
 .name img {
-    width: 450px; 
-    height: auto; 
-    display: block; 
+    width: 450px;
+    height: auto;
+    display: block;
     margin-top: 10px;
-    margin-left: 0px;
-    margin-bottom: 0px;
+    margin-left: 0;
+    margin-bottom: 0;
 }
-
 
 .intro p {
     color: #ffffff;
-    font-style: bold;
+    font-weight: bold;
+    text-align: center; /* Center text on all devices */
 }
 
 .custom-button img {
-    width: 180px; 
-    height: auto; 
-    display: block; 
+    width: 180px;
+    height: auto;
+    display: block;
 }
 
 .custom-button {
-    text-decoration: none; 
-    display: inline-block; 
+    text-decoration: none;
+    display: inline-block;
     margin-top: 0px;
 }
 
+/* Media Query for Mobile Devices */
+@media (max-width: 1080px) {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 10px 20px;
+    }
+    
+
+    .home-button img,
+    .menu-button img {
+        width: 50px; /* Adjust size as needed */
+        height: 55px;
+    }
+
+    .menu-button {
+        display: grid; /* Show menu button on mobile */
+        cursor: pointer;
+    }
+
+    .navbar.active {
+        display: flex; /* Show navbar when active */
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 20px 0;
+    }
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 0;
+    }
+
+    .navbar ul li {
+        display: block; /* Stack menu items */
+    }
+
+    .navbar ul li a:hover {
+        color: #000000;
+        background-color: #F1E8B8;
+        padding: 10px 150px; /* Increase padding on hover for larger clickable area */
+        border-radius: 10px;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        gap: 20px;
+        
+    }
+
+    .profile-picture {
+        width: 80%; /* Make profile picture responsive */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 0; /* Remove right margin on mobile */
+    }
+
+    .name img {
+        width: 80%; /* Adjust width for mobile */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .custom-button img {
+        width: 190px; /* Reduce button size on mobile */
+    }
+
+    .intro p {
+        text-align: left; /* Ensure text is centered on mobile */
+        padding: 0 10px; /* Add padding for better readability */
+    }
+}
+
+/* Hide header buttons on desktop */
+@media (min-width: 1081px) {
+    .header {
+        display: none; /* Hide header buttons on desktop */
+    }
+}
+
+/* Media Query for Landscape Orientation */
+@media (orientation: landscape) {
+    body {
+        height: auto; /* Allow body height to adjust based on content */
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+        overflow-y: auto; /* Allow vertical scrolling */
+    }
+
+    .container {
+        min-height: 100vh; /* Ensure container fills at least the viewport height */
+        width: 100%; /* Use full width of the screen */
+        background: linear-gradient(124deg, rgba(242,143,79,1) 0%, rgba(90,80,108,1) 83%);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .navbar ul li a:hover {
+        color: #000000;
+        background-color: #F1E8B8;
+        padding: 10px 400px; /* Increase padding on hover for larger clickable area */
+        border-radius: 10px;
+    }
+
+
+    .navbar, .content {
+        width: 100%; /* Make elements fill the screen width */
+    }
+}
