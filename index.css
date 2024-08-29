@@ -203,6 +203,7 @@ body {
     }
 }
 
+
 @media (orientation: landscape) {
     body {
         height: auto;
@@ -224,3 +225,4 @@ body {
         width: 100%;
     }
 }
+
