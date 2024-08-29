@@ -7,10 +7,20 @@
     <link rel="stylesheet" href="works.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
+        <header class="header">
+            <a href="index.html" class="home-button">
+                <img src="https://res.cloudinary.com/diws5bcu6/image/upload/v1724642518/Home_xaz5yp.svg" alt="Home">
+            </a>
+            <a href="#" class="menu-button" id="menuButton">
+                <img src="https://res.cloudinary.com/diws5bcu6/image/upload/v1724642525/menu_lrm9gw.png" alt="Menu">
+            </a>
+        </header>
+
         <nav class="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -21,37 +31,64 @@
         </nav>
         
         <div class="content">
-            </div>
-
             <div class="products-section">
                 <div class="products">
                     <div class="product_title">
                         <img src="https://res.cloudinary.com/diws5bcu6/image/upload/v1724476399/works_title_hafq1m.svg" alt="works_title">
                     </div>
-                        <div class="product-item">
-                            <img src="https://res.cloudinary.com/diws5bcu6/image/upload/v1724476537/pencil_j3u5i1.png" alt="Editable Pencil Wrap Sticker">
-                            <p>Editable Pencil Wrap Sticker</p>
-                        </div>
-                        <div class="product-item">
-                            <img src="https://res.cloudinary.com/diws5bcu6/image/upload/v1724476553/birthday_wlzuxz.png" alt="Editable Birthday Bundle">
-                            <p>Editable Birthday Bundle</p>
-                        </div>
-                        <div class="product-item">
-                            <img src="https://res.cloudinary.com/diws5bcu6/image/upload/v1724476498/commericial_i5d2u3.png" alt="Editable Commercial Calendar Template">
+                    
+                    <div class="product-item">
+                        <a href="https://www.raket.ph/raecellann/products/cleaning-schedule-editable-canva-template" target="_blank">
+                            <img src="https://res.cloudinary.com/diws5bcu6/image/upload/v1724740577/Copy_of_Front_kpgvdd.png" alt="Editable Pencil Wrap Sticker">
+                            <p>Cleaning Planner</p>
+                        </a>
+                    </div>
+                    
+                    <div class="product-item">
+                        <a href="https://www.raket.ph/raecellann/products/gcash-and-paymaya-transaction-record-with-freebies" target="_blank">
+                            <img src="https://res.cloudinary.com/diws5bcu6/image/upload/v1724740564/Gcash_Paymaya_l7s665.png" alt="Editable Birthday Bundle">
+                            <p>GCash and PayMaya Transaction Record</p>
+                        </a>
+                    </div>
+                    
+                    <div class="product-item">
+                        <a href="https://www.raket.ph/raecellann/products/2025-commercial-calendar" target="_blank">
+                            <img src="https://res.cloudinary.com/diws5bcu6/image/upload/v1724740497/2025_COMMERCIAL_CALENDAR_1_-min_rjqggd.png" alt="Editable Commercial Calendar Template">
                             <p>Editable Commercial Calendar Template</p>
-                            
-                        </div>
-                        <div class="product-item">
-                            <img src="https://res.cloudinary.com/diws5bcu6/image/upload/v1724476515/wall_calendar_eknlub.png" alt="Editable Photo Calendar">
+                        </a>
+                    </div>
+                    
+                    <div class="product-item">
+                        <a href="https://www.raket.ph/raecellann/products/2025-photo-wall-calendar" target="_blank">
+                            <img src="https://res.cloudinary.com/diws5bcu6/image/upload/v1724740564/2025-min_lslu2p.png" alt="Editable Photo Calendar">
                             <p>Editable Photo Calendar</p>
-                        </div>
+                        </a>
+                    </div>
+                    
                 </div>
-                <div class="notice">
-                    <p>"Would you like to avail? Kindly click the link provided for each product. You will be directly taken to my buy-and-sell page. Thank you!"</p>
-                    <button class="close-btn">&times;</button>
+                <div class="notice-container">
+                    <div class="notice">
+                        <p>Would you like to avail? Kindly click the link provided for each product. You will be directly taken to my buy-and-sell page. </p>
+                    </div>
+                    <div class="contact">
+                        <p>Got questions or ideas? Let’s chat! Feel free to reach out to me directly for more information or if you’re interested in collaborating. Just send me a message via
+                            <a href="mailto:raecellanndomingogalvez@gmail.com" target="_blank">
+                                <i class="fas fa-envelope"></i> Gmail
+                            </a> or
+                            <a href="https://www.raket.ph/raecellann" target="_blank">
+                                <i class="fas fa-rocket"></i> Raket Account
+                            </a>.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        document.querySelector('.menu-button').addEventListener('click', function() {
+            document.querySelector('.navbar').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
