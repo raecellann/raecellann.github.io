@@ -11,7 +11,17 @@
 </head>
 <body>
     <div class="container">
-        <nav class="navbar">
+        <header class="header">
+            <a href="index.html" class="home-button">
+                <img src="https://res.cloudinary.com/diws5bcu6/image/upload/v1724642518/Home_xaz5yp.svg" alt="Home">
+            </a>
+            <a href="#" class="menu-button" id="menuButton">
+                <img src="https://res.cloudinary.com/diws5bcu6/image/upload/v1724642525/menu_lrm9gw.png" alt="Menu">
+            </a>
+            <img src="https://res.cloudinary.com/diws5bcu6/image/upload/v1724657308/main_pic_gallery_jyqnsj.svg">
+        </header>
+
+        <nav class="navbar" id="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
@@ -19,19 +29,27 @@
                 <li><a href="works.html">Works</a></li>
             </ul>
         </nav>
+
         <div class="content">
             <div class="main_title">
                 <img src="https://res.cloudinary.com/diws5bcu6/image/upload/v1724476439/galley_title_rmoo64.svg" alt="gallery-title">
             </div>
         </div>
+
         <div class="main_picture">
-            <img src="https://res.cloudinary.com/diws5bcu6/image/upload/v1724476437/gallery_main_pic_qr08wu.png" alt="gallery-main-pic">
+            <img src="https://res.cloudinary.com/diws5bcu6/image/upload/v1724504235/main_pic-min_2_qyjczo.png" alt="gallery-main-pic">
         </div>
-        <div class="gallery">
-            <img src="https://res.cloudinary.com/diws5bcu6/image/upload/v1724476419/1_xoigy9.svg" alt="Image 1">
-            <img src="https://res.cloudinary.com/diws5bcu6/image/upload/v1724476388/3_n4k2rn.svg" alt="Image 2">
+
+        <div class="gallery small_picture">
+            <img src="https://res.cloudinary.com/diws5bcu6/image/upload/v1724504805/1_v1f9my.svg" alt="Image 1">
+            <img src="https://res.cloudinary.com/diws5bcu6/image/upload/v1724506451/3_2_ypduov.svg" alt="Image 2">
         </div>
-        
     </div>
+
+    <script>
+        document.querySelector('.menu-button').addEventListener('click', function() {
+            document.querySelector('.navbar').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
