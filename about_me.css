@@ -1,12 +1,17 @@
 body {
     margin: 0;
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-color: #1E1E1E;
     color: white;
     padding: 0;
-    height: 100%;
+    height: 100vh;
     width: 100%;
-    overflow: hidden; 
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 .container {
@@ -15,20 +20,30 @@ body {
     align-items: center;
     height: 100vh;
     padding: 20px;
-    background-image: url(https://res.cloudinary.com/diws5bcu6/image/upload/v1724476433/background_about_me_zxx2lm.png);
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
+    background-image: url("https://res.cloudinary.com/diws5bcu6/image/upload/v1724659652/background_about_me_2_dggsnj.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: white;
+    overflow-y: auto; 
 }
 
 .navbar {
-    width: 95%;
+    width: 100%;
+    max-width: 1200px;
     background-color: rgba(255, 255, 255, 0.365);
     padding: 20px;
     border-radius: 15px;
     display: flex;
     justify-content: flex-end;
+    flex-shrink: 0;
+    transition: all 0.3s ease-in-out; 
+}
+
+@media (max-width: 1080px) {
+    .navbar {
+        display: none; 
+    }
 }
 
 .navbar ul {
@@ -48,7 +63,7 @@ body {
     text-decoration: none;
     font-weight: bold;
     padding: 10px;
-    font-size: large;
+    font-size: 1rem;
 }
 
 .navbar ul li a:hover {
@@ -56,50 +71,51 @@ body {
     background-color: #F1E8B8;
     padding: 10px;
     border-radius: 10px;
+    box-shadow: black;
 }
 
 .content {
     display: flex;
-    justify-content: space-between; 
-    align-items: flex-start; 
+    flex-direction: row; 
+    justify-content: flex-start;
+    align-items: center;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1200px; 
     margin-top: 50px;
+    gap: 50px;
+    flex-wrap: wrap; 
 }
 
 .left-section {
+    flex: 1;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: flex-start;
-    width: 45%;
-}
-
-.about_me_title {
-    margin-bottom: 10px; 
+    max-width: 100%;
 }
 
 .about_me_title img {
-    width: 400px;
+    width: 100%;
+    max-width: 400px; 
     height: auto;
     margin-bottom: 0;
 }
 
 .links {
-    margin-top: 0px; 
+    margin-top: 0px;
     display: flex;
-    flex-direction: column; 
-    gap: 5px; 
+    flex-direction: column;
+    gap: 5px;
 }
 
 .links ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    margin-top: -40px;
 }
 
 .links li {
-    margin-bottom: 5px; 
+    margin-bottom: 5px;
 }
 
 .links a {
@@ -107,13 +123,13 @@ body {
     text-decoration: none;
     display: flex;
     align-items: center;
-    font-size: 18px;
+    font-size: 1rem; 
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .links a i {
-    font-size: 24px;
-    margin-right: 15px; 
+    font-size: 1.5rem; 
+    margin-right: 15px;
 }
 
 .links a:hover i {
@@ -122,48 +138,188 @@ body {
 }
 
 .right-section {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    width: 50%;
+    align-items: flex-end; 
     margin-left: auto;
-    margin-right: 0; 
+    max-width: 100%; 
 }
 
 .Name_about {
     margin-bottom: 20px;
+    margin-top: 0%;
+    margin-right: 5%;
 }
 
 .Name_about h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    font-size: 60px;
+    font-size: 3rem; 
     color: white;
     margin: 0;
-    text-align: right; 
+    text-align: right;
 }
 
 .Address {
     text-align: right;
+    margin-bottom: 2%;
+    margin-right: 5%;
 }
 
 .Address p {
-    font-size: 18px;
+    font-size: 1rem; 
     margin: 0;
     line-height: 1.8;
-    border-color: #000000;
-    margin-bottom: 15px;
-    margin-top: 10px;
     text-align: right;
+    white-space: nowrap;
+    text-decoration: underline;
+    margin-right: 0;
 }
+
 .description {
-    text-align: right; 
+    text-align: right;
+    margin-right: 5%;
+    display: inline-block;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.813);
+    border-radius: 8px;
+    font-weight: 500; 
 }
 
 .description p {
-    font-size: 18px;
+    font-size: 0.875rem; 
     margin: 0;
     line-height: 1.6;
-    border-color: #000000;
-    justify-content: space-evenly;
+    text-align: right;
+    color: #000000;
+}
+
+
+@media (max-width: 1080px) {
+    .container {
+        min-height: 100vh;
+        width: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .home-button img,
+    .menu-button img {
+        width: 50px;
+        height: 70px;
+    }
+
+    .menu-button {
+        display: grid;
+        cursor: pointer;
+    }
+
+    .navbar.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 0;
+    }
+
+    .navbar ul li {
+        display: block;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        gap: 20px;
+    }
+
+    .left-section, .right-section {
+        width: 90%;
+        margin: 0;
+    }
+
+    .right-section h1 {
+        font-size: 2.5rem; 
+        line-height: 90%;
+        margin-bottom: 0;
+    }
+
+    .Address p {
+        font-size: 0.875rem; 
+        text-align: right;
+        text-decoration: underline;
+    }
+
+    .about_me_title img {
+        width: 80%;
+    }
+
+    .links a {
+        font-size: 0.9rem; 
+    }
+}
+
+@media (min-width: 1081px) {
+    .header {
+        display: none;
+    }
+}
+
+@media (orientation: landscape) {
+    body {
+        height: auto;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .container {
+        min-height: 100vh;
+        width: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .left-section, .right-section {
+        width: 90%;
+        margin: 0;
+    }
+
+    .right-section h1 {
+        font-size: 5rem; 
+        text-align: right;
+        line-height: 90%;
+        margin-bottom: 0;
+    }
+
+    .Address p {
+        font-size: 0.875rem;
+        text-align: right;
+        margin-top: 0;
+    }
+
+    .home-button img,
+    .menu-button img {
+        width: 50px;
+        height: 70px;
+    }
+
+    .navbar, .content {
+        width: 100%;
+    }
 }
